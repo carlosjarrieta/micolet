@@ -1,0 +1,35 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class:"splash-container" }) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+  <div class="card">
+    <div class="card-header text-center">
+      <p>
+        <%= image_tag 'logo.png', class:"logo-img", alt:"logo"%>
+      </p>
+      <h3 class="mb-1">Cambiar contraseña</h3>
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control form-control-lg" %>
+      </div>
+      <div class="form-group">
+        <% if @minimum_password_length %>
+          <br />
+          <em><%= @minimum_password_length %> caracteres mínimos</em>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "new-password", class:"form-control form-control-lg", placeholder:"nueva contraseña" %>
+      </div>
+      <div class="form-group">
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control form-control-lg", placeholder:"Confirmar contraseña" %>
+      </div>
+      <div class="form-group">
+        <%= f.password_field :current_password, autocomplete: "current-password", class:"form-control form-control-lg", placeholder:"Contraseña actual" %>
+      </div>
+      <div class="form-group pt-2">
+        <%= f.submit "Login", class:"btn btn-primary btn-lg btn-block" %>
+      </div>
+    </div>
+    <div class="card-footer bg-white">
+      <p>Ya tienes cuenta? <%= link_to "LOGIN", class:"text-secondary"%></p>
+    </div>
+  </div>
+<% end %>
