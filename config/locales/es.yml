@@ -1,0 +1,25 @@
+es:
+  activerecord:
+      errors:
+        messages:
+
+        models:
+          category:
+            attributes:
+              name:
+                blank: "Ingrese el nombre de la categría"
+          user:
+            attributes:
+              email:
+                blank: "Ingrese el correo electrónico"
+                invalid: "El email no es válido"
+              password:
+                blank: "La costraseña no puede estar en blanco"
+
+
+
+  hello: "Bienvenidos a"
+  menu: "Menú"
+  add_to_cart: "Agregar al carrito"
+  subscribe: "!Suscribirme¡"
+  filter: "Filtros"

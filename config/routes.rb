@@ -10,4 +10,7 @@ Rails.application.routes.draw do
     get "users/edit" => "users/registrations#edit", :as => "edit_user_registration"
     put "user" => "users/registrations#update", :as => "user_registration"
   end
+
+  # Ruta para suscribirle a los newsletter
+
 end

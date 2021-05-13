@@ -31,8 +31,9 @@ module Vision2020
     config.generators.system_tests = nil
     config.generators.assets = false
     config.generators.helper = false
-    config.assets.paths << Rails.root.join("app", "assets", "fonts")
+
+    config.i18n.available_locales = [:es, :en, :de]
     config.i18n.default_locale = :es
-    config.i18n.available_locales = [:en, :es]
+    config.i18n.fallbacks = true
   end
 end
