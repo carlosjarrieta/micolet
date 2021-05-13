@@ -32,3 +32,6 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+db/micolet_development.sqlite3
+db/micolet_development_test.sqlite3
+db/schema.rb

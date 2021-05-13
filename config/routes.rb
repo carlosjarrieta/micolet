@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 
   # Ruta para suscribirle a los newsletter
 
+  resources :subscriptions, only: [:new, :create]
 end

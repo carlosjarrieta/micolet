@@ -5,8 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 User.create([
-  { name: "Carlos Arrieta", password: "123456", email: "user1.micolet.com", phone: "+573042075846" },
-  { password: "123456", email: "user2.micolet.com" },
+  { name: "Carlos Arrieta", password: "123456",
+    email: "carlosj.arrieta@gmail.com", phone: "+573042075846", language: "es" },
+  { password: "123456", email: "user2@micolet.com" },
 ])
 
 Category.create([

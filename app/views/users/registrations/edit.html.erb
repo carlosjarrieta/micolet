@@ -1,4 +1,4 @@
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class:"splash-container" }) do |f| %>
+<%= form_for(resource, as: resource_name, url: user_registration_path, html: { method: :put, class:"splash-container" }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
   <div class="card">
     <div class="card-header text-center">
@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="card-footer bg-white">
-      <p>Ya tienes cuenta? <%= link_to "LOGIN", class:"text-secondary"%></p>
+      <p>Ya tienes cuenta? <%= link_to "LOGIN", root_path, class:"text-secondary" %></p>
     </div>
   </div>
 <% end %>

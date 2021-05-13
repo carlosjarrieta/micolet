@@ -30,6 +30,7 @@ class User < ApplicationRecord
   devise :database_authenticatable,
          :recoverable, :rememberable, :validatable
 
+  # gravatar del usuaio
   def gravatarurl
     hash = Digest::MD5.hexdigest(email)
     "http://www.gravatar.com/avatar/#{hash}"
@@ -37,4 +38,14 @@ class User < ApplicationRecord
 
   validates :email, presence: true, length: { maximum: 60 },
                     uniqueness: { case_sensitive: false, with: URI::MailTo::EMAIL_REGEXP }
+
+  has_one :subscription
+
+  def subscriptions
+    if self.subscription
+      self.subscription.subscription_categories
+    else
+      return 0
+    end
+  end
 end

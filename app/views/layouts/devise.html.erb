@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
   <head>
-    <title>Vision2020</title>
+    <title>Micolet - Login</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,7 +22,7 @@
       }
     </style>
   </head>
-  <body data-notice="<%= j notice -%>" data-alert="<%= j alert || devise_error_messages -%>">
+  <body class="bg" data-notice="<%= j notice -%>" data-alert="<%= j alert || devise_error_messages -%>">
     <%= yield %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>

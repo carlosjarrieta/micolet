@@ -24,6 +24,7 @@ gem "turbolinks", "~> 5"
 gem "webpacker", "~> 5.2"
 gem "bootstrap", "~> 4.6"
 gem "jquery-rails", "~> 4.4"
+# gem "rails-i18n", "~> 5.1"
 gem "devise", "~> 4.7"
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -47,3 +48,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "sidekiq", "~> 6.2"

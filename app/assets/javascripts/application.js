@@ -19,6 +19,7 @@
 //= require bootstrap-sprockets
 //= require jquery.slimscroll
 //= require notify.min
+//= require jquery-validation/dist/jquery.validate.min.js
 //= require main-js
 
 $.notify.defaults({

@@ -15,6 +15,14 @@ es:
                 invalid: "El email no es válido"
               password:
                 blank: "La costraseña no puede estar en blanco"
+          subscription:
+            attributes:
+              user_id:
+                taken: "Ya te encuentras suscrito a nuestro boletin informativo"
+              email:
+                blank: "!Necesitamos tú correo electrónico"
+                taken: "Ya te encuentras suscrito a nuestro boletin informativo"
+          
 
 
 
@@ -23,3 +31,11 @@ es:
   add_to_cart: "Agregar al carrito"
   subscribe: "!Suscribirme¡"
   filter: "Filtros"
+  your_subscriptions: "Tus suscripciones"
+  product_available: "Productos disponibles"
+  hide: "Suscribirse a notocias"
+  presentation: "!Bienvenid@¡ Próximante abriremos nuestra web en éste país."
+  preferences: "Preferencias"
+  notice_subscription: "Bien hecho, ahora recibirás nuestro boletines con tus preferencias"
+  alert_subscription: "Ya estás suscrito!"
+  api_email_invalid: "El email no existe o dominio incorrecto"
