@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_10_194114) do
+ActiveRecord::Schema.define(version: 2021_05_13_033207) do
+
+  create_table "subscription_categories", force: :cascade do |t|
+    t.integer "subscription_id"
+    t.integer "category_id"
+    t.index ["category_id"], name: "index_subscription_categories_on_category_id"
+    t.index ["subscription_id"], name: "index_subscription_categories_on_subscription_id"
+  end
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_subscriptions_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
