@@ -34,3 +34,9 @@ en:
   presentation: "Welcome! Next we will open our website in this country."
   preferences: "Preferences"
   api_email_invalid: "Email no exist o is invalid"
+
+
+  user:
+    legend_head_login: "Please, enter your username and password"
+    forgot_your_password: "Forgot your password?"
+    remember_me: "Remember me"

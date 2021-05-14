@@ -306,33 +306,25 @@
         <div class="product-sidebar-widget">
           <h4 class="mb-0"> <%= t("filter")%></h4>
           <div class="toolbar ml-auto">
-            <%= link_to new_subscription_path, class:"btn btn-success btn-block" do %>
-              <%= t("subscribe")%>
+            <% if user_signed_in? %>
+              <%= link_to new_subscription_path, class:"btn btn-success btn-block" do %>
+                <%= t("subscribe")%>
+              <% end %>
+            <% else %>
+              <%= link_to guests_new_path, class:"btn btn-primary btn-block" do %>
+                <%= t("subscribe")%>
+              <% end %>
             <% end %>
           </div>
         </div>
         <div class="product-sidebar-widget">
-          <h4 class="product-sidebar-widget-title">Category</h4>
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="cat-1">
-            <label class="custom-control-label" for="cat-1">Categories #1</label>
-          </div>
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="cat-2">
-            <label class="custom-control-label" for="cat-2">Categories #2</label>
-          </div>
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="cat-3">
-            <label class="custom-control-label" for="cat-3">Categories #3</label>
-          </div>
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="cat-4">
-            <label class="custom-control-label" for="cat-4">Categories #4</label>
-          </div>
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="cat-5">
-            <label class="custom-control-label" for="cat-5">Categories #5</label>
-          </div>
+          <h4 class="product-sidebar-widget-title"><%= t('activerecord.models.category.other')%></h4>
+          <% Category.all.each do |cat| %>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="cat-1">
+              <label class="custom-control-label" for=""><%= cat.name %></label>
+            </div>
+          <% end %>
         </div>
         <div class="product-sidebar-widget">
           <h4 class="product-sidebar-widget-title">Size</h4>

@@ -1,8 +1,5 @@
 <div class="splash-container">
   <div class="card">
-    <div class="card-header text-center">
-      <%= image_tag 'logo.png', class:"logo-img", alt:"logo"%><span class="splash-description">Ingrese su correo electrónico</span>
-    </div>
     <div class="card-body">
       <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
         <p>Le enviaremos un correo electrónico para restablecer su contraseña</p>

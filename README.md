@@ -14,7 +14,7 @@ Clone el repositorio y ejecute:
 
 
 ## Modulos
-###EmailValidate
+### EmailValidate
 https://www.abstractapi.com/email-verification-validation-api 
 Este módulo consume el api (abstractapi) comprobando la validez del email y el quality_score
 
@@ -22,4 +22,21 @@ Este módulo consume el api (abstractapi) comprobando la validez del email y el 
 En la clase ApplicationRecord se creo el método **validate_email_api** para validar el email, este método es heredado por los modelos, sólo debe validarse en los modelos que incluyan un campo email.
 
 ## Prototipo
-El prototipo utiliza la gem Devise para la autenticación del usuario. Cuando un usuario ya está autenticado, si este quiere suscribirse a los newsletter, el email del usuario aparecerá en el input para ingresar el email.
+El prototipo utiliza la gem Devise para la autenticación del usuario. Cuando un usuario ya está autenticado, si este quiere suscribirse a los newsletter, el email del usuario aparecerá en el input para recoger el email, si es un visitante no autenticado, igualmente aparece el formulario para suscribirse a las newsletter, pero se aprovechan los datos y se crea una cuenta de usuario. 
+	- La lógica que sigue sería informar al visitante para que active su cuenta.
+
+# Bonos no calificables en la prueba
+
+## Bootstrap 4
+Se utilizó una plantilla free bootstap 4, las imágenes y textos son propios de la plantilla. El copy right es de colorlib.
+
+## Devise
+El fronted está preparado en su forma más básica para hacer login, cambiar la contraseña, recuperar la contraseña.
+
+## Traducciones
+Se hace uso de I18n para las traducciones
+
+### Idiomas
+	- ES
+	- EN
+	- DE 

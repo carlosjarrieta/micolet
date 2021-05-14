@@ -26,6 +26,7 @@ gem "bootstrap", "~> 4.6"
 gem "jquery-rails", "~> 4.4"
 # gem "rails-i18n", "~> 5.1"
 gem "devise", "~> 4.7"
+# gem "bcrypt", "~> 3.1"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
@@ -50,3 +51,5 @@ end
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "sidekiq", "~> 6.2"
+
+gem "rspec-rails", "~> 5.0", :groups => [:development, :test]

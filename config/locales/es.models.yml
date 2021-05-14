@@ -1,0 +1,7 @@
+---
+es:
+  activerecord:
+    models:
+      category:
+        one: Categoria
+        other: Categorías

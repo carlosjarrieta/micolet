@@ -14,4 +14,10 @@ Rails.application.routes.draw do
   # Ruta para suscribirle a los newsletter
 
   resources :subscriptions, only: [:new, :create]
+
+  scope :guests, as: :guests do
+    get :new, to: "guests#new"
+    post :create, to: "guests#create"
+    # resources :subscriptions, controller: "guests", only: [:new, :create], as: :guest
+  end
 end

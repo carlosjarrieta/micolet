@@ -1,0 +1,88 @@
+  <!-- ============================================================== -->
+<!-- pageheader  -->
+<!-- ============================================================== -->
+<div class="row">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <div class="page-header">
+      <h2 class="pageheader-title">E-commerce Product Checkout </h2>
+      <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
+      <div class="page-breadcrumb">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">E-coommerce</a></li>
+            <li class="breadcrumb-item active" aria-current="page">E-Commerce Product Checkout</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader  -->
+<!-- ============================================================== -->
+<div class="row">
+  <div class="offset-xl-2 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-body text-center">
+            <%= t(:presentation) %>
+          </div>
+          <%= form_tag guests_create_path, id:"form-subscription" do %>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <%= label_tag :email%>
+                  <%= email_field_tag "subscription[email]",nil, class:"form-control", required: true %>
+                </div>
+              </div>
+            </div>
+            <div class="card-body border-top">
+              <h5><%= t("preferences") %></h5>
+              <%= collection_check_boxes(:subscription, :category_ids, Category.all, :id, :name ) do |b| %>
+                <div class="custom-control custom-checkbox">
+                  <%=  b.label(:"data-value" => b.value) { b.check_box + b.text } %>
+                </div>
+              <% end %>
+            </div>
+            <hr class="mb-4">
+            <%= button_tag type: 'submit', class:"btn btn-success btn-block", id:"cmd_save" do %>
+              <i class="far fa-paper-plane"></i> <%= t(:subscribe)%>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(function(){
+    var form = $("#form-subscription")
+    form.validate({
+      errorClass: "text-danger",
+      rules: {
+        "subscription[email]": {
+          required: true,
+          email: true
+        },
+         'subscription[category_ids][]': {
+        required: true
+        }
+      },
+      messages:{
+          "subscription[email]": {
+          required: "Ingrese su correo electrónico",
+          email: "Formato de correo inválido"
+        },
+        'subscription[category_ids][]': "Debes seleccionar una categoría"
+      },
+       errorPlacement: function (error, element) {
+            if (element.attr("type") == "checkbox") {
+                 $.notify("Debes seleccionar una categoría", "warn");
+            } else {
+                  $(element).after(error);
+            }
+        }
+    })
+  })
+</script>

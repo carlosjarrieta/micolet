@@ -39,3 +39,12 @@ es:
   notice_subscription: "Bien hecho, ahora recibirás nuestro boletines con tus preferencias"
   alert_subscription: "Ya estás suscrito!"
   api_email_invalid: "El email no existe o dominio incorrecto"
+
+  user:
+    legend_head_login: "Por favor ingresa tu usuario y contraseña"
+    forgot_your_password: "Perdiste tu contraseña?"
+    remember_me: "Recuerdame"
+  
+  
+    product:
+      
