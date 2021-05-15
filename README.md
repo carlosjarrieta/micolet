@@ -33,6 +33,10 @@ Se utilizó una plantilla free bootstap 4, las imágenes y textos son propios de
 ## Devise
 El fronted está preparado en su forma más básica para hacer login, cambiar la contraseña, recuperar la contraseña.
 
+## Sidekiq
+Para el procesamiento de colas y trabajos en background.
+Se creó un jobs (SubscriptionJob) para el envío de los emails al momento de la suscripción.
+
 ## Traducciones
 Se hace uso de I18n para las traducciones
 
